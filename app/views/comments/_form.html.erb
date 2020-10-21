@@ -1,0 +1,14 @@
+<%= form_with(model: [@article, @article.comments.build ], local:
+true) do |form| %>
+  <p>
+    <%= form.label 'Autor' %><br>
+    <%= form.text_field :commenter %><br>
+  </p>
+  <p>
+    <%= form.label 'Comentário' %><br>
+    <%= form.text_area :body %><br>
+  </p>
+  <p>
+    <%= form.submit 'Adicionar comentário' %>
+  </p>
+<% end %>

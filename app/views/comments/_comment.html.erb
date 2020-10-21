@@ -1,0 +1,13 @@
+<p>
+  <strong>Autor:</strong>
+  <%= comment.commenter %>
+</p>
+<p>
+  <strong>Comentário:</strong>
+  <%= comment.body %>
+</p>
+<p>
+  <%= link_to 'Apagar Comentário', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Realmente deseja excluir?' } %>
+</p>
